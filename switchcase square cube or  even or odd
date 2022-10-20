@@ -1,0 +1,44 @@
+package switchcase;
+
+import java.util.Scanner;
+
+public class Switc {
+	 public static void main(String args[]) {
+	        
+	        try (Scanner in = new Scanner(System.in)) {
+				System.out.println("1. Square of the number");
+				System.out.println("2. Cube of the number");
+				System.out.println("3. check even or odd");
+				System.out.print("Enter your choice: ");
+				int choice = in.nextInt();
+				
+				switch(choice) {
+				    case 1:
+				        System.out.print("Enter a number: ");
+				        double s1 = in.nextDouble();
+				        double s2 = Math.pow(s1,2);
+				        System.out.println("Square of the number = " + s2);
+				        break;
+				        
+				    case 2:
+				        System.out.print("Enter a number: ");
+				        double c1 = in.nextDouble();
+				        double c2 = Math.pow(c1, 3);
+				        System.out.println("cube of the number = " + c2);
+				        break;
+				        
+				    case 3:
+				        System.out.print("Enter a number: ");
+				        double k = in.nextDouble();
+				        if(k%2==0)
+				        System.out.print("The number is even: ");
+				        else
+				        System.out.print("The number is odd: ");
+				        break;
+				        
+				    default:
+				        System.out.println("Wrong choice! Please select from 1 or 2 or 3.");
+				}
+			}
+	    }
+	}
